@@ -4,6 +4,7 @@ const workspaceModel = require("../models/WorkspaceModel");
 const taskModel = require("../models/taskModel");
 exports.isLoggedIn = async (req, res, next) => {
   try {
+    console.log(req);
     const token = req.cookies.token;
     if (!token) {
       throw new Error("please login first");
